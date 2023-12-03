@@ -1,0 +1,133 @@
+$Blue-accent: rgba(0, 172, 220, 1);
+$Gray-elements: rgba(243, 243, 243, 1);
+$Main-accent: rgba(6, 11, 53, 1);
+$Secondary: rgba(97, 96, 112, 1);
+$White: rgba(255, 255, 255, 1);
+$Yellow-stars: rgba(255, 222, 106, 1);
+
+body {
+    background-color: gray;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+}
+
+.card {
+    display: flex;
+    width: 200px;
+    height: 408px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+
+    &__img {
+        width: 160px;
+        height: fit-content;
+
+        margin-top: 15px;
+    }
+
+    &__desc {
+        color: $Main-accent;
+        font-family: "Roboto";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+
+        margin-top: 40px;
+        padding-inline: 16px;
+    }
+
+    &__code {
+        color: $Secondary;
+        font-family: "Roboto";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+
+        padding-inline: 16px;
+        margin-top: -5px;
+        padding-bottom: 10px;
+    }
+
+    &__reviews {
+        display: flex;
+        width: 166px;
+        height: 16px;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &--count {
+            color: $Main-accent;
+            font-family: "Roboto";
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+
+    &__stars {
+        display: flex;
+    
+        &--star {
+            width: 16px;
+            height: 16px;
+            background-image: url("/src/images/star.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &--star:nth-child(n):not(:last-child) {
+            margin-right: 4px;  
+        }
+
+        &--star:nth-child(n):not(:nth-child(n+5)){
+            background-image: url("/src/images/star-active.svg");
+        }
+    }
+
+    &__price {
+        display: flex;
+        width: 166px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+
+        &--text {
+            color: $Secondary;
+            font-family: "Roboto";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        &--amount {
+            color: $Main-accent;
+            text-align: right;
+            font-family: "Roboto";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        width: 166px;
+        height: 40px;
+        border-radius: 5px;
+        background: $Blue-accent;
+        border: 1px solid #fff;
+
+        color: $White;
+        text-align: center;
+        font-family: "Roboto";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
